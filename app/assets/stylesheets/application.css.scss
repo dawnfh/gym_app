@@ -1,0 +1,162 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ 
+ *****Do not use *= require in Sass or your other stylesheets will
+ not be able to access the Bootstrap mixins or variables.
+ */
+
+// used SaSS to use variables, extends to save timed
+
+$b-yellow: #e5e491; $text-green: #47b700; $text-blue: #007dff;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'custom';
+
+
+
+body {
+    background-color: #9691ab;
+    background: url(land6.jpg);
+    width: 100%;
+    height: 100%;
+    font-family: 'BebasRegular';
+    color: black;
+    font-family: 'Lora', serif;
+    // font-family: 'Alegreya Sans', sans-serif;
+}
+
+//  bs columns  //
+
+.col-xs-6 {
+	display: inline-block;
+  vertical-align: top;
+  float: none;
+}
+
+//   images   //
+
+.sm_pics {
+	margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+	width: 300px;
+	height: auto;
+} 
+
+div image_tag {
+	border-radius: 50%;
+}
+	
+
+//  nav bar for landing page  //
+
+
+#menu {  
+
+    margin-right: 43%;
+    position: fixed;
+    right: 0;
+    top: 11%;
+    margin-top: -2.5em;
+    background-color: black;
+}
+
+#menu li :hover {
+		text-decoration: none;
+		display: inline;
+    background-color: #f29c9c
+}
+
+li{
+	float: left;
+	padding: 10px;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-right:20px
+}
+
+//  home anding page  //
+
+
+.home_container {
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 3.4em;	
+	}
+
+//   2 divs within home_center //
+
+
+.home_intro_1 {
+	  float: left;
+	  background-color: $b-yellow;
+	  text-align: center;
+    width: 450px;
+    height: 450px;	
+    box-shadow: 10px 10px 5px #888888;
+    border-radius: 15%; 
+    border: solid 1px #000;
+    z-index: 0;
+}
+.home_intro_2 {
+		float: right;	
+	  @extend .home_intro_1;
+}
+
+
+
+
+//  buttons  //
+
+.btn {
+	border-radius: 24px;
+	color: 5ab5e1;
+}
+
+//  signup form , edit form //
+
+#signup {
+	position: relative;
+  top:50%;
+  left:10%;
+  width:500px;
+ }
+
+.panel{
+	@extend #signup;
+}
+
+.container, .userimage {
+	@extend #signup;
+}
+
+ //   flash messages //
+
+ .flash_a {
+ 	color: red;
+ }
+
+ .flash_n {
+ 	color: black;
+ }
+
+ @media only screen and (max-width: 479px){
+    .home_container { 
+				width: 90%; 
+			}
+}

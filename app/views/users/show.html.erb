@@ -1,0 +1,32 @@
+
+<div class="container">
+<h1>Welcome, <%= @user.username %></h1>
+<h2><span id="welcome">Your GymTalk Profile Page</span></h2>
+</div>
+<div class="row">  
+  <div class="col-xs-6"> 
+		<div class="userimage">	
+		 <%= image_tag @user.avatar.url(:medium) %>
+		</div><br>
+
+	<div class="panel panel-default">
+	  <div class="panel-body">
+				<strong>Fname: </strong><%= @user.fname %><br>
+				<strong>Username: </strong><%= @user.username %><br>
+				<strong>Lname: </strong><%= @user.lname %><br>
+				<strong>Sex: </strong><%= @user.sex %><br>
+				<strong>Email: <strong><%= @user.email %><br>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr>
+<div class="row">  
+  <div class="col-xs-6">
+	 <h2>Edit Your Profile</h2>
+
+		<%= render 'userform' %>
+
+ </div>
+</div>

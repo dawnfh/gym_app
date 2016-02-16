@@ -1,0 +1,10 @@
+<%= render 'partials/navbar' unless @disable_nav %>
+
+<% if current_user.posts.any? %>
+	<h3>Posts (<%= current_user.posts.count %>)</h3>
+    <% end %>
+
+    <div>
+   		<%= render 'postform' %>
+		</div>
+

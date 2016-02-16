@@ -1,0 +1,26 @@
+== README
+
+		GymTalk
+
+Social app to promote, encourage people to go to a gym, try a dance class, seek out other peoples experiences and views on places they may be members to or those who like going to different places. 
+
+GymTalk aimed at providing a network service and blog post of other experiences with seeking activities to keep in shape.
+
+
+
+Resources and inspirations for website development:
+
+		NYCDA
+
+
+
+
+
+
+		Wish list:
+
+**** to implement a search box
+http://railscasts.  
+com/episodes/37-simple-search-form
+
+		Some added Ruby Gems:

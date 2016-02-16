@@ -1,0 +1,23 @@
+
+ <%= render 'partials/navbar' unless @disable_nav %>
+
+<h1>Your GymTalk</h1>
+
+
+<h2>Welcome <%= @user.username %> to GymTalk</h2>
+
+
+<div class="panel panel-default">
+    <div class="panel-body">
+    	<% @post.each do |p| %>
+    	<ul>
+				<li><%= p.place %></li>
+				<li><%= p.location %></li> 
+				<li><%= p.city %></li> 
+				<li><%= p.post %><li> 
+			</ul>
+			<% end %>
+		</div>
+</div>
+
+<%= link_to 'Home', root_path, class: "btn btn-default" %>
