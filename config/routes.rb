@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy', as: 'logout'
 
   get '/posts' => 'posts#index'
-  post '/posts' => 'post#create'
+  post '/posts' => 'posts#create'
   post '/posts' => 'posts#index'
 
   resources :users do

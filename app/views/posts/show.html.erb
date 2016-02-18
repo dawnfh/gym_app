@@ -1,5 +1,5 @@
 
- <%= render 'partials/navbar' unless @disable_nav %>
+ <%#= render 'partials/navbar' unless @disable_nav %>
 
 <h1>Your GymTalk</h1>
 
@@ -9,7 +9,7 @@
 
 <div class="panel panel-default">
     <div class="panel-body">
-    	<% @post.each do |p| %>
+    	<% @posts.each do |p| %>
     	<ul>
 				<li><%= p.place %></li>
 				<li><%= p.location %></li> 

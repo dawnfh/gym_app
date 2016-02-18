@@ -2,25 +2,34 @@
 
 		GymTalk
 
-Social app to promote, encourage people to go to a gym, try a dance class, seek out other peoples experiences and views on places they may be members to or those who like going to different places. 
+Social app to promote and encourage people to go to a gym, try a dance class, seek out other peoples experiences and views on places they have gone too. 
 
-GymTalk aimed at providing a network service and blog post of other experiences with seeking activities to keep in shape.
-
-
-
-Resources and inspirations for website development:
-
-		NYCDA
+GymTalk is about defocusing on the bar scene but on importance of including physical activity of some kind to promote better health and quality of life. GymTalk aimed at providing a network service and blog post of other experiences who are seeking activities to keep in shape.
 
 
+
+Primary resources and inspirations for website development:
+
+		NYCDA, NYC, passions for physical activity
 
 
 
 
-		Wish list:
+
+		
+		Ruby Gems:
+
+bootstrap -
+
+will_paginate - 
+
+masonary-rails - http://www.rubydoc.info/gems/masonry-rails/0.2.4
+
+
+		Wishlist:
 
 **** to implement a search box
 http://railscasts.  
 com/episodes/37-simple-search-form
 
-		Some added Ruby Gems:
+

@@ -1,11 +1,16 @@
-
+$b-yellow: #e5e491; $text-green: #47b700; $text-blue: #007dff;
 
 h1, h2, h3, h4 {
 	color: black;
-	font-weight: bold;
+	font-size: bold;
 }
-h3,h4 {
-	color: black;
+h3 {
+	color: white;
+	font-style: italic;
+}
+
+h4 {
+	color: red;
 	font-style: italic;
 }
 
@@ -51,5 +56,76 @@ h3,h4 {
 	width: 64px;
 	padding:5px;
 	z-index: 1;
+}
+
+// photo collage masonry //
+
+
+#masonry-container {
+	width: 1200px;
+	margin: 0 auto;
+	background-color: black;
+  padding: 5px 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  clear: both;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.clearfix:before, .clearfix:after { 
+	content: ""; 
+	display: table; 
+}
+
+.clearfix:after { 
+	clear: both; 
+}
+.clearfix { 
+	zoom: 1; 
+}
+
+.col1 { width: 80px; }
+.col2 { width: 180px; }
+.col3 { width: 280px; } 
+.col4 { width: 380px; }
+.col5 { width: 480px; }
+.col6 { width: 580px; }
+
+.col1 img { max-width: 80px; }
+.col2 img { max-width: 180px; }
+.col3 img { max-width: 280px; }
+.col4 img { max-width: 380px; }
+.col5 img { max-width: 480px; }
+.col6 img { max-width: 580px; }
+
+// Media Queries
+@media only screen and (max-width : 1199px),
+only screen and (max-device-width : 1199px){
+ #masonry-container {
+ width: 1000px;
+ }
+}
+
+@media only screen and (max-width : 999px),
+only screen and (max-device-width : 999px){
+ #masonry-container {
+ width: 800px;
+ }
+}
+
+@media only screen and (max-width : 599px),
+only screen and (max-device-width : 599px){
+ #masonry-container {
+ width: 400px;
+ }
+}
+ 
+@media only screen and (max-width : 399px),
+only screen and (max-device-width : 399px){
+ #masonry-container {
+ width: 200px;
+ }
 }
 

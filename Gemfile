@@ -38,6 +38,12 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # pagination library that integrates
 gem 'will_paginate', '~> 3.0.6'
 
+# jquery photo collage 
+gem 'masonry-rails', '~> 0.2.4'
+
+# page load faster for jquery
+gem 'jquery-turbolinks', '~> 2.1'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
