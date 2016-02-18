@@ -9,10 +9,23 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
+
+*= require 'masonry/basic'
+*= require 'masonry/centered'
+*= require 'masonry/fluid'
+*= require 'masonry/gutters'
+*= require 'masonry/infinitescroll'
+*= require 'masonry/right-to-left'
+*= require 'masonry/transitions'
+*= require_tree .
+
+
+
  
  *****Do not use *= require in Sass or your other stylesheets will
  not be able to access the Bootstrap mixins or variables.
  */
+
 
 // used SaSS to use variables, extends to save timed
 
@@ -25,8 +38,10 @@ $b-yellow: #e5e491; $text-green: #47b700; $text-blue: #007dff;
 
 
 body {
+     background: url(topland.jpg);
+     z-index: 1;
     background-color: #9691ab;
-    background: url(land6.jpg);
+    background-size: 100%;
     width: 100%;
     height: 100%;
     font-family: 'BebasRegular';
@@ -53,16 +68,15 @@ body {
 	height: auto;
 } 
 
-div image_tag {
-	border-radius: 50%;
-}
-	
+
+.landpic {
+  border-radius:50%
+}	
 
 //  nav bar for landing page  //
 
 
 #menu {  
-
     margin-right: 43%;
     position: fixed;
     right: 0;
@@ -118,9 +132,6 @@ ul {
 	  @extend .home_intro_1;
 }
 
-
-
-
 //  buttons  //
 
 .btn {
@@ -137,14 +148,27 @@ ul {
   width:500px;
  }
 
-.panel{
+#review {
+ position: relative;
+  top:50%;
+  left:10%;
+  width:500px;
+ }
+
+
+.panel {
 	@extend #signup;
+  text-align: center;
+  -webkit-box-shadow: -9px -11px 29px 0px rgba(0,0,0,0.82);
+  -moz-box-shadow: -9px -11px 29px 0px rgba(0,0,0,0.82);
+  box-shadow: -9px -11px 29px 0px rgba(0,0,0,0.82);    
 }
 
 .container, .userimage {
 	@extend #signup;
 }
 
+// post messaages
  //   flash messages //
 
  .flash_a {

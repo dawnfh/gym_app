@@ -14,7 +14,6 @@ class PostsController < ApplicationController
     
     def new
         @post = Post.new
-        redirect_to  @user
     end   
     
     def show
@@ -30,9 +29,9 @@ class PostsController < ApplicationController
         
     
     def create
-        @post = current_user.posts.build(posts_params)
+        @post = current_user.posts.build(post_params)
         if @post.save
-            redirect_to  @posts
+            redirect_to  current_user
         else
             redirect_to :back
         end

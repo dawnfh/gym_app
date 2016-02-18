@@ -4,11 +4,13 @@
         <li><%= link_to 'Home', root_path, class: "btn btn-success" %></li>
         <li><%= link_to 'My Porfile', current_user, class: "btn btn-success" %></li>
 
-        <li><%#= link_to 'Create Post', user_posts_path(current_user), class: "btn btn-success" %></li>
+        
 
 			<% if current_user %>
+
+			<li><%= link_to ' Your Review', new_user_post_path(current_user), class: "btn btn-success" %></li>
     
-        <li><%= link_to 'All Talk', posts_path, class: "btn btn-success" %></li>
+        <li><%= link_to 'GymTalk', posts_path, class: "btn btn-success" %></li>
        <% end %>
 
         <li><%= link_to 'LogOut', login_path, class: "btn btn-success" %><li>

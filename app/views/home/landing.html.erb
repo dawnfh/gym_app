@@ -13,14 +13,50 @@
 <% end %>
 <div class="home_container">
 
+        <!--  pics for landing page -->
+
+<!--   <div class="sm_pics">  
+   
+</div>
+<div class="sm_pics">  
+   <%= image_tag 'land1.jpg' %>
+</div>
+<div class="sm_pics">  
+   <%= image_tag 'land2.jpg' %>
+</div>
+<div class="sm_pics">  
+   <%= image_tag 'land3.jpg' %>
+</div>
+<div class="sm_pics">  
+   <%= image_tag 'land5.jpg' %>
+</div>
+<div>
+   <%= image_tag 'land1.jpg' %>
+</div>
+<div class="sm_pics">  
+   <%= image_tag 'land2.jpg' %>
+</div>
+<div class="sm_pics">  
+   <%= image_tag 'land5.jpg' %>
+</div>
+<div class="sm_pics">
+  <%= image_tag 'land1.jpg' %>
+</div>
+<div>
+  <%= image_tag 'land5.jpg' %>
+</div> -->
+
+
 <!--  if user logs in they will have a welcome message on the landing page  -->
 
      <% if current_user %>
 
+     <%= render 'partials/navbar' %>
+
                <h2> Welcome <%= current_user.username %>!</h2><hr>
               <div class="home_current_user">
-                <h3>What are you up to? Looking for a new place to train?</h3><br> 
-                <h3>Want do to something different like a dance class, yoga or go rock climbing?</h3>
+                <h4>What are you up to? Looking for a new place to train?</h4><br> 
+                <h4>Want do to something different like a dance class, yoga or go rock climbing?</h4>
                 <hr>
               </div>              
 </div>
@@ -38,14 +74,13 @@
           <strong>Date: &nbsp</strong><%= time_ago_in_words(p.created_at) %><br>
           <br><hr>
           <% end %>
-
-          <%= will_paginate @posts, previous_label: "Older", next_label: "Newer", inner_window: 1, outer_window: 0 %>
+          <%= will_paginate @posts, previous_label: "Newer", next_label: "Older", inner_window: 1, outer_window: 0 %>
         </div>
       </div>
     </div> 
 </div>
 
-<div class="col-xs-6">
+<!-- <div class="col-xs-6">
              
   <ul>
      <li><%= link_to "Profile", user_path(current_user), class: "btn btn-success" %></li>
@@ -53,7 +88,7 @@
      <li><%= link_to "LogOut", logout_path, method: :delete, class: "btn btn-info"%></li>
   
   </ul>
-</div>
+</div> -->
 
 
          
@@ -64,11 +99,11 @@
       
       <div class="home_intro_1">
           <h1>Welcome To GymTalk</h1><hr><br>
-          <h3>Find other members reviews: about gyms, dances studios, health activity events in NYC & LA</h3>
+          <h4>Find other members reviews: about gyms, dances studios, health activity events in NYC & LA</h4>
       </div>
       <div class="home_intro_2">
         <h1>Get Gymtalk</h1><hr><br>
-          <h3>Do you like to visit different sport clubs?  Itching for a new dance class? GymTalk App is for those who want to share and learn about where to go to get a good workout, try a new sport or explore a different place.</h3>
+          <h4>Do you like to visit different sport clubs?  Itching for a new dance class? GymTalk App is for those who want to share and learn about where to go to get a good workout, try a new sport or explore a different place.</h4>
       </div>
  
      <% end %>
@@ -76,39 +111,70 @@
 
 
 
-<!--  pics for landing page -->
 
-<div class="sm_pics">  
-   <%= image_tag 'land4.jpg' %>
-</div>
-<div class="sm_pics">  
-   <%= image_tag 'land1.jpg' %>
-</div>
-<div class="sm_pics">  
-   <%= image_tag 'land2.jpg' %>
-</div>
-<div class="sm_pics">  
-   <%= image_tag 'land3.jpg' %>
-</div>
-<div class="sm_pics">  
-   <%= image_tag 'land4.jpg' %>
-</div>
-<div>
-   <%= image_tag 'land1.jpg' %>
-</div>
-<div class="sm_pics">  
-   <%= image_tag 'land2.jpg' %>
-</div>
-<div class="sm_pics">  
-   <%= image_tag 'land4.jpg' %>
+
+
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix" >
+  <div class="box col4">
+    <%= image_tag 'land1.jpg' %>
+  </div>
+  <div class="box col4">
+    <h4>Find a spot to workout now!</h4>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land2.jpg', class: "landpic" %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land3.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land4.jpg' %>
+    </p>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land5.jpg' %>
+  </div>
+  <div class="box col4">
+    <h4>Prepare yourself for the latest training that burns!</h4>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land6.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land7.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land8.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land9.jpg' %>
+  </div>
+  <div class="box col4">
+    <h4>Too tired being of being tired? Take a run in your local park. Check out the dance studio after work. </h4>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land10.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land11.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land12.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land13.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land14.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'land15.jpg' %>
+  </div>
 </div>
 
-<div>
-  <%= image_tag 'land1.jpg' %>
-</div>
-<div>
-  <%= image_tag 'land5.jpg' %>
-</div>
+
+
+
   
 
     
