@@ -19,7 +19,7 @@ Primary resources and inspirations for website development:
 		
 		Ruby Gems:
 
-bootstrap -
+bootstrap-rails
 
 will_paginate - 
 
@@ -28,7 +28,9 @@ masonary-rails - http://www.rubydoc.info/gems/masonry-rails/0.2.4
 
 		Wishlist:
 
-**** to implement a search box
+bootstrap will_paginate - done
+
+to implement a search box
 http://railscasts.  
 com/episodes/37-simple-search-form
 
