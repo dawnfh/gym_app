@@ -38,6 +38,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # pagination library that integrates
 gem 'will_paginate', '~> 3.0.6'
 
+# bootstrap styling for pagination
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+
 # jquery photo collage 
 gem 'masonry-rails', '~> 0.2.4'
 

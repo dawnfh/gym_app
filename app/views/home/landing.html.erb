@@ -41,7 +41,7 @@
           <strong>Date: &nbsp</strong><%= time_ago_in_words(p.created_at) %><br>
           <br><hr>
           <% end %>
-          <%= will_paginate @posts, previous_label: "Newer", next_label: "Older", inner_window: 1, outer_window: 0 %>
+          <%= will_paginate @posts, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older", inner_window: 1, outer_window: 0 %>
         </div>
       </div>
     </div> 
