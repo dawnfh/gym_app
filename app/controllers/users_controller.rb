@@ -23,8 +23,7 @@ class UsersController < ApplicationController
        redirect_to :back
     end
   end
-  
-    
+   
     # user is displayed by params
      def show
        @user = User.find(params[:id])
