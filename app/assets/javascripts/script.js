@@ -1,37 +1,26 @@
 
 
-function myFunction() {
-    alert("I am an alert box!");
-}
 
-//  to toggle images; appear to scroll
+// jquery masonry plugin targets the container with the images
 
-
-// jquery plugin targets the container with our images
-// $('#masonry-container').imagesLoaded( function() {
-// $('#masonry-container').masonry({
-// itemSelector: '.box',
-// columnWidth: 100,
-// isAnimated: !Modernizr.csstransitions,
-// isRTL: true
-// });
-// });
 
 $(function(){
- 
-    var $container = $('#masonry-container');
-  
-    $container.imagesLoaded( function(){
-  		$container.masonry({                           
-        itemSelector : '.box'
-      });
+
+  var $container = $('#masonry-container');
+
+  $container.imagesLoaded( function(){
+		$container.masonry({                           
+      itemSelector : '.box'
     });
-  
-  });
-	
-	$(document).ready(function(){
-  $(".box").click(function(){
-    $(".box").slideToggle();
   });
 });
 
+// sliding images on landing page 
+
+	$(document).ready(function(){
+    $("#masonry-container").click(function(){
+      $(".box").slideToggle("slow")  
+    });
+});
+
+ 

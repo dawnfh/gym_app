@@ -13,39 +13,6 @@
 <% end %>
 <div class="home_container">
 
-        <!--  pics for landing page -->
-
-<!--   <div class="sm_pics">  
-   
-</div>
-<div class="sm_pics">  
-   <%= image_tag 'land1.jpg' %>
-</div>
-<div class="sm_pics">  
-   <%= image_tag 'land2.jpg' %>
-</div>
-<div class="sm_pics">  
-   <%= image_tag 'land3.jpg' %>
-</div>
-<div class="sm_pics">  
-   <%= image_tag 'land5.jpg' %>
-</div>
-<div>
-   <%= image_tag 'land1.jpg' %>
-</div>
-<div class="sm_pics">  
-   <%= image_tag 'land2.jpg' %>
-</div>
-<div class="sm_pics">  
-   <%= image_tag 'land5.jpg' %>
-</div>
-<div class="sm_pics">
-  <%= image_tag 'land1.jpg' %>
-</div>
-<div>
-  <%= image_tag 'land5.jpg' %>
-</div> -->
-
 
 <!--  if user logs in they will have a welcome message on the landing page  -->
 
@@ -53,9 +20,9 @@
 
      <%= render 'partials/navbar' %>
 
-               <h2> Welcome <%= current_user.username %>!</h2><hr>
+               <h2 id="h2l"> Welcome <%= current_user.username %>!</h2><hr>
               <div class="home_current_user">
-                <h4>What are you up to? Looking for a new place to train?</h4><br> 
+                <h4 id="h2">What are you up to? Looking for a new place to train?</h4><br> 
                 <h4>Want do to something different like a dance class, yoga or go rock climbing?</h4>
                 <hr>
               </div>              
@@ -80,15 +47,9 @@
     </div> 
 </div>
 
-<!-- <div class="col-xs-6">
+
              
-  <ul>
-     <li><%= link_to "Profile", user_path(current_user), class: "btn btn-success" %></li>
-     <li><%= link_to "Post", posts_path, class: "btn btn-success" %></li>
-     <li><%= link_to "LogOut", logout_path, method: :delete, class: "btn btn-info"%></li>
-  
-  </ul>
-</div> -->
+
 
 
          
@@ -99,11 +60,9 @@
       
       <div class="home_intro_1">
           <h1>Welcome To GymTalk</h1><hr><br>
-          <h4>Find other members reviews: about gyms, dances studios, health activity events in NYC & LA</h4>
       </div>
       <div class="home_intro_2">
-        <h1>Get Gymtalk</h1><hr><br>
-          <h4>Do you like to visit different sport clubs?  Itching for a new dance class? GymTalk App is for those who want to share and learn about where to go to get a good workout, try a new sport or explore a different place.</h4>
+        <h1>The app on where to move and who is doing it!!</h1><hr><br>
       </div>
  
      <% end %>

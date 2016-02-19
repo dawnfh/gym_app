@@ -1,7 +1,7 @@
 $b-yellow: #e5e491; $text-green: #47b700; $text-blue: #007dff;
 
 h1, h2, h3, h4 {
-	color: black;
+	color: white;
 	font-size: bold;
 }
 h3 {
@@ -12,6 +12,14 @@ h3 {
 h4 {
 	color: red;
 	font-style: italic;
+}
+
+
+#h2, #h4 {
+	background-color: $text-green;
+ 	font-size: 30px;
+ 	color: #3e5bc7;
+
 }
 
 //  nav_bar for all other pages  //
@@ -104,28 +112,35 @@ h4 {
 @media only screen and (max-width : 1199px),
 only screen and (max-device-width : 1199px){
  #masonry-container {
- width: 1000px;
+ 		width: 1000px;
  }
 }
 
 @media only screen and (max-width : 999px),
 only screen and (max-device-width : 999px){
  #masonry-container {
- width: 800px;
+ 		width: 800px;
  }
 }
 
 @media only screen and (max-width : 599px),
 only screen and (max-device-width : 599px){
  #masonry-container {
- width: 400px;
+ 		width: 400px;
  }
+ #menu {
+ 	top: 4%;
+ }
+
 }
  
 @media only screen and (max-width : 399px),
 only screen and (max-device-width : 399px){
  #masonry-container {
- width: 200px;
+ 		width: 200px;
  }
+ #menu: {
+ 		margin-right: 5%;
+ 		}
 }
 
