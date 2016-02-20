@@ -10,7 +10,7 @@ GymTalk is about defocusing on the bar scene but on importance of including phys
 
 Primary resources and inspirations for website development:
 
-		NYCDA, NYC, passions for physical activity
+		NYCDA, NYC, passion for socializing through physical healthy activities. 
 
 
 
@@ -19,17 +19,17 @@ Primary resources and inspirations for website development:
 		
 		Ruby Gems:
 
-bootstrap -
+paperclip
+
+bootstrap-rails-
+
+bootstrap will_paginate
 
 will_paginate - 
 
 masonary-rails - http://www.rubydoc.info/gems/masonry-rails/0.2.4
 
 
-		Wishlist:
-
-**** to implement a search box
-http://railscasts.  
-com/episodes/37-simple-search-form
+		
 
 
