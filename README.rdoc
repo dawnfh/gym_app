@@ -2,7 +2,7 @@
 
 		GymTalk
 
-Social app to promote and encourage people to go to a gym, try a dance class, seek out other peoples experiences and views on places they have gone too. 
+Social app to promote and encourage people to go to a gym, try a dance class, seek out other people's experiences and views on places they have gone too. 
 
 GymTalk is about defocusing on the bar scene but on importance of including physical activity of some kind to promote better health and quality of life. GymTalk aimed at providing a network service and blog post of other experiences who are seeking activities to keep in shape.
 
