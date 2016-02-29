@@ -10,10 +10,10 @@
 
 <% if current_user.posts.any? %>
 	<h3>Posts (<%= current_user.posts.count %>)</h3>
-    <% end %>
+<% end %>
 
-    <div>
-   <%= render 'postform' %>
+<div>
+	<%= render 'postform' %>
 </div>
 
 
@@ -31,18 +31,22 @@
 				<br> 
 				<strong>Post: </strong><%= r.post %>
 				<br>
-				Posted: <%= time_ago_in_words(r.created_at) %> ago.
+				Posted: <%= time_ago_in_words(r.created_at) %>.ago.
 				<hr><br>
 				<% end %>
 				<br>
 		</div>
 </div>
 
-Your Reviews
+<h5>Your Reviews</h5>
+
+
 <div class="panel panel-default">
 	  <div class="panel-body">
-				<strong>Review: </strong><%= @post.post %><br>
-				<strong>Created: </strong><%= time_go_in_words
+	  	 <% posts.each do |p| %>
+        <%=link_to user do %>
+				<strong>Review: </strong><%= p.post %><br>
+				<strong>Created: </strong><%= time_go_in_words(p.created_at).ago %>
 
 <% end %>
 

@@ -1,37 +1,46 @@
 == README
 
-		GymTalk
+GymTalk
 
-Social app to promote and encourage people to go to a gym, try a dance class, seek out other peoples experiences and views on places they have gone too. 
+		Social app providing a network service and blog post to promote and encourage people to go to a gym, try a dance class, seek out other people's experiences and share views on places they have gone too. Businesses have the ability to market themselves and give discounts or listing of special events to give perks to members and non-members.
 
-GymTalk is about defocusing on the bar scene but on importance of including physical activity of some kind to promote better health and quality of life. GymTalk aimed at providing a network service and blog post of other experiences who are seeking activities to keep in shape.
+		GymTalk directs the talk on motivating people into doing  physical activity of some kind to promote better health and quality of life. 
 
 
 
 Primary resources and inspirations for website development:
 
-		NYCDA, NYC, passions for physical activity
+		NYCDA
+		Experience of living in NYC, passions for physical activity
+
+
+About development:
+		GymTalk's framework is Ruby on Rails, HTML, CSS, SASS, JQeury Plugins
 
 
 
 
 
 		
-		Ruby Gems:
+Ruby Gems:
 
-bootstrap-rails
+		bootstrap-rails
 
-will_paginate - 
+		will_paginate 
 
-masonary-rails - http://www.rubydoc.info/gems/masonry-rails/0.2.4
+		jquery-rails 
+
+		masonary-rails - http://www.rubydoc.info/gems/masonry-rails/0.2.4
+
+		
 
 
-		Wishlist:
+Wishlist:
 
-bootstrap will_paginate - done
+		bootstrap will_paginate - done
 
-to implement a search box
-http://railscasts.  
-com/episodes/37-simple-search-form
+		to implement a search box
+		http://railscasts.  
+		com/episodes/37-simple-search-form
 
 

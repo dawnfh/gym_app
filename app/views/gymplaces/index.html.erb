@@ -1,0 +1,37 @@
+
+
+<h1>GymTalk This Week</h1>
+
+<ul>
+
+<% @gymplaces.each do |p|
+	<h2><%= link_to p.gymplace, p %></ht>
+ 
+ <% if current_user%>
+
+<div class="panel panel-default">
+    <div class="panel-body-post">
+    		<% @gymplaces.each do |p| %>
+
+    		<strong>Place: </strong><%= p.place %>
+				<br>
+				<strong>Desc: </strong><%= p.description %>
+				<br>
+				<strong>Location: </strong><%= p.location %>
+				<br>
+				<strong>City: </strong><%= p.city %>
+				<br> 
+    		<strong>Zipcode: </strong><%= p.zipcode %>
+				<br>
+				<strong>Email: </strong><%= p.email %>
+				<br>
+				<strong>Tel: </strong><%= p.telephone %>
+				<br>
+
+				Posted: <%= time_ago_in_words(p.created_at) %> ago.
+				<hr><br>
+				<% end %>
+				<br>
+		</div>
+</div>
+		

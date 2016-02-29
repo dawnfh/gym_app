@@ -1,0 +1,2 @@
+module GymplacesHelper
+end

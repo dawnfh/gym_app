@@ -11,16 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160207074204) do
+ActiveRecord::Schema.define(version: 20160227175011) do
 
-  create_table "posts", force: :cascade do |t|
+  create_table "gymplaces", force: :cascade do |t|
     t.string   "place"
+    t.string   "description"
     t.string   "location"
     t.string   "city"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "zipcode"
+    t.string   "email"
+    t.string   "telephone"
+  end
+
+  add_index "gymplaces", ["user_id"], name: "index_gymplaces_on_user_id"
+
+  create_table "posts", force: :cascade do |t|
     t.text     "post"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "gymplace_id"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
@@ -38,6 +53,7 @@ ActiveRecord::Schema.define(version: 20160207074204) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "zipcode"
   end
 
 end

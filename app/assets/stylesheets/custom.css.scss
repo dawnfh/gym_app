@@ -1,7 +1,7 @@
 $b-yellow: #e5e491; $text-green: #47b700; $text-blue: #007dff;
 
 h1, h2, h3, h4 {
-	color: white;
+	color: black;
 	font-size: bold;
 }
 h3 {
@@ -66,6 +66,16 @@ h4 {
 	z-index: 1;
 }
 
+// bs lightbox img gallery
+
+.modal-dialog {
+	width: 600px;
+}
+
+.thumbnail {
+	margin-bottom: 6px;
+}
+
 // photo collage masonry //
 
 
@@ -109,6 +119,7 @@ h4 {
 .col6 img { max-width: 580px; }
 
 // Media Queries
+
 @media only screen and (max-width : 1199px),
 only screen and (max-device-width : 1199px){
  #masonry-container {
@@ -143,4 +154,6 @@ only screen and (max-device-width : 399px){
  		margin-right: 5%;
  		}
 }
+
+
 

@@ -8,7 +8,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-spy="scroll" data-target="#nb">
   
   
 <!-- logo -->
@@ -16,6 +16,10 @@
   <div class="logo">
     <%= image_tag 'chat.png' %><span id="bluelogo">Gym</span><span id="greenlogo">Talk</span>
   </div>
+
+  <!-- insert render to display nav unless marked disabled -->
+
+ <%= render 'partials/navbar' unless @disable_nav %>
 
   
 <!-- social bar  -->
@@ -40,16 +44,11 @@
   </div>
 
 
-<!-- insert render to display nav unless marked disabled -->
+ <!-- yeild below  -->
 
- <%= render 'partials/navbar' unless @disable_nav %>
-
- <div id="footer">
-  <h6></h6>
-</div>
-      <div id="yeild_container">
-            <%= yield %>
-      </div>
+  <div id="yeild_container">
+        <%= yield %>
+  </div>
 
 </body>
 </html>

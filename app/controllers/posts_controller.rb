@@ -2,15 +2,14 @@ class PostsController < ApplicationController
     #all posts to be display, new post to be created
     def index
         if session[:user_id]
-            @posts = Post.all.order("created_at DESC").paginate(page: params[:page], per_page: 2)
+            @posts = Post.all.order("create_at DESC").paginate(page: params[:page], :per_page => 2)
             @post = Post.where(post_id: current_user)
             redirect_to root_path
         else
-            flast[:alert] = "You must be logged in to view GymTalk reviews."
-        redirect_to login_path
+            flash[:alert] = "You must be logged in to view GymTalk reviews."
+            redirect_to login_path
         end
     end
-    
     
     def new
         @post = Post.new
@@ -19,7 +18,7 @@ class PostsController < ApplicationController
     def show
         @post = Post.find(params[:id])
         @posts = @current_user.posts
-        redirect_to 'index'
+        redirect_to gymplace_path
     end
 
     def edit
@@ -28,18 +27,23 @@ class PostsController < ApplicationController
     end
         
     
-    def create
-        @post = current_user.posts.build(post_params)
+    def create 
+        #find the gymplace from the url  
+        @gymplace = Gymplace.find(params[:gymplace_id])
+        #build a record for a post for that gymplace with the submitted info from form
+        @post = @gymplace.posts.build(post_params)
+        #add the user_id of the current user
+        @post.user = current_user
+        
         if @post.save
-            redirect_to  current_user
+            redirect_to gymplace_path(@gymplace)
         else
             redirect_to :back
         end
     end
     
-    
     def destroy
-        @post = Post.find params[:id]
+        @post = Post.find(params[:id])
         @post.destroy
     end
     
@@ -47,7 +51,7 @@ class PostsController < ApplicationController
     private
     
     def post_params
-        params.require(:post). permit(:post, :place, :location, :city)
+        params.require(:post). permit(:post)
     end
        
 end

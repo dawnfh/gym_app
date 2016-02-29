@@ -1,17 +1,27 @@
 Rails.application.routes.draw do
+  get 'gymplaces/index'
+
+  get 'gymplaces/new'
+
   root 'home#landing'
   
-  get '/login' =>'sessions#new', as: 'login'
+  get '/login' =>'sessions#new'
   post '/login' => 'sessions#create'
-  delete '/logout' => 'sessions#destroy', as: 'logout'
+  get '/logout' => 'sessions#destroy', as: 'logout'
+  delete '/logout' => 'sessions#destroy'
 
   get '/posts' => 'posts#index'
   post '/posts' => 'posts#create'
   post '/posts' => 'posts#index'
 
-  resources :users do
-    resources :posts, except: :index
+  resources :gymplaces do
+    resources :posts
   end
+  resources :users
+  
+ 
+    
+
 
 
 

@@ -1,0 +1,58 @@
+
+<div id="signup">
+
+        <div class="form-group">
+
+                <%= form_for @gymplace do |f| %>
+
+
+                <div class="control-group">
+                        <%= f.label :Place, class: "control-label" %>
+                
+                        <%= f.text_field :place class: "form-control", placeholder: "name of place" %>
+        
+                </div><br>
+
+                <div class="control-group">   
+                        <%= f.label :Description, class: "control-label" %>
+        
+                        <%= f.text_field :description, class: "form-control", placeholder: "description, services" %>
+                
+                </div><br>
+
+                <div class="control-group">  
+                        <%= f.label :Location, class: "control-label" %>
+                        <%= f.text_field :location, class: "form-control", placeholder: "address" %>
+                </div><br>
+
+                 <div class="control-group">  
+                        <%= f.label :City, class: "control-label" %>
+                        <%= f.text_field :city, class: "form-control", placeholder: "city" %>
+                </div><br>
+
+                <div class="control-group">       
+                        <%= f.label :Latitude, class: "control-label" %> 
+                        <%= f.latitude_field :latitude, class: "form-control", placeholder: "Password" %>
+                </div><br>
+
+                 <div class="control-group">       
+                        <%= f.label :Long, class: "control-label" %>
+                        <%= f.longitude_field :longitude, class: "form-control", placeholder: "longitude" %>
+                </div><br>
+                
+                <div class="control-group">       
+                        <%= f.label :Zipcode, class: "control-label" %> 
+                        <%= f.text_field :zipcode, class: "form-control", placeholder: "zipcode" %>
+                </div><br>
+
+                <div class="control-group">       
+                        <%= f.label :Tel, class: "control-label" %> 
+                        <%= f.telephone_field :telephone, class: "form-control", placeholder: "telephone" %>
+                </div><br>
+                        <% end %>
+        </div>
+</div>
+
+        
+
+       

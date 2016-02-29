@@ -1,2 +1,11 @@
 module ApplicationHelper
+	def sortable(column, title = nil)
+    title ||= column.titleize
+    css_class = (column == sort_column) ? "current &crarr; 
+      #{sort_direction}" : nil
+    direction = (column == sort_column && sort_direction == "&crarr; 
+      asc") ? "desc" : "asc"
+    link_to title, params.merge(:sort => column, :direction => direction,:page =>nil), {:class => css_class}
+  end
 end
+

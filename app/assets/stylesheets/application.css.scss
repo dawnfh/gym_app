@@ -34,18 +34,22 @@ $b-yellow: #e5e491; $text-green: #47b700; $text-blue: #007dff;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'custom';
+@import 'image';
 
 
 
-body {
-     background: url(topland.jpg);
-     z-index: 2;
+body {        
+    position: relative;
+    background: url(kayak.jpg);
+    z-index: 2;
     background-size: 100%;
     width: 100%;
     height: 100%;
     font-family: 'BebasRegular';
+    font-size: 14px;
     color: black;
     font-family: 'Lora', serif;
+    overflow-y: scroll
 }
 
 //  bs columns  //

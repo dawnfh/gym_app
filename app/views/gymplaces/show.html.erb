@@ -1,0 +1,26 @@
+<h2><%= @gymplace.place%></h2>
+
+<h2>Hi <%= current_user.username %>, please share a review about <%= @gymplace.place %></h2>
+
+<!-- To create a post on this place -->
+<%= render 'posts/postform' %>
+
+<!-- The posts on this gymplace from all users  -->
+<h3>All reviews for <= @gymplace.place %></h3>
+
+<div class="panel panel-default">
+	<div class="panel-heading">All Posts</div>
+  <div class="panel-body-post">
+  	<% @posts.each do |p| %>
+  		<br>
+  		<strong>Review: &nbsp</strong><%= p.post %><br>
+  		<strong>User: &nbsp</strong><%= p.user.username %>	
+			<br><hr>
+		<% end %>
+	</div>
+	<%= will_paginate @posts, renderer: BootstrapPagination::Rails, previous_label: "Newer", next_label: "Older"%>
+</div>
+
+
+
+
