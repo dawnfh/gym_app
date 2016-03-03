@@ -138,14 +138,7 @@ Applying different background  -->
 
 <!-- Image gallery for businesses -->
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-8">
-      <div id="mapemb">
 
-    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:700px;'><div id='gmap_canvas' style='height:440px;width:700px;'></div><div><small><a href="http://embedgooglemaps.com">                 embed google map              </a></small></div><div><small><a href="http://freedirectorysubmissionsites.com/">reedirectorysubmissionsites.com</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(40.71004239078351,-74.00460384813232),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(40.71004239078351,-74.00460384813232)});infowindow = new google.maps.InfoWindow({content:'<strong>SoulCycle</strong><br>101 Maiden Lane<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-    </div>
-  </div>
 
 <!-- Business Gallery -->
 
@@ -163,13 +156,20 @@ Applying different background  -->
 
         <div class="col-xs-6 col-md-3"><a title="SoulCycle"><img class="thumbnail img-responsive" src="../assets/soulcycle.jpg" width="600" height="300"></a></div>
 
-        <div class="col-xs-6 col-md-3"><a title="Bikram Yoga"><img class="thumbnail img-responsive" src="../assets/bikram.jpg" width="600" height="300"></a></div>
-      </div>
+        <div class="col-xs-6 col-md-3"><a title="Bikram Yoga"><img class="thumbnail img-responsive" src="../assets/bikram.jpg" width="600" height="300"></a>
+        </div>
     </div>
   </div>
+</div>
 </div> 
 
+  <div class="row">
+    <div class="col-md-offset-3 col-xs-12 col-md-4">
+      <div id="mapemb">
 
-<!-- bs modal effects  -->
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:700px;'><div id='gmap_canvas' style='height:440px;width:700px;'></div><div><small><a href="http://embedgooglemaps.com">                 embed google map              </a></small></div><div><small><a href="http://freedirectorysubmissionsites.com/">reedirectorysubmissionsites.com</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(40.71004239078351,-74.00460384813232),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(40.71004239078351,-74.00460384813232)});infowindow = new google.maps.InfoWindow({content:'<strong>SoulCycle</strong><br>101 Maiden Lane<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+    </div>
+  </div>
+
 
 <% end %>
