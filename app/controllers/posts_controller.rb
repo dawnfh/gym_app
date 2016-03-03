@@ -2,7 +2,7 @@ class PostsController < ApplicationController
     #all posts to be display, new post to be created
     def index
         if session[:user_id]
-            @posts = Post.all.order("create_at DESC").paginate(page: params[:page], :per_page => 2)
+            @posts = Post.all.order("create_at DESC").paginate(page: params[:page], :per_page => 4)
             @post = Post.where(post_id: current_user)
             redirect_to root_path
         else

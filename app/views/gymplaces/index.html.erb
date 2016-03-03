@@ -4,10 +4,11 @@
 
 <ul>
 
-<% @gymplaces.each do |p|
-	<h2><%= link_to p.gymplace, p %></ht>
+<% @gymplaces.each do |p| %>
+	<h2><%= link_to p.gymplace %></h2>
+<% end %>
  
- <% if current_user%>
+ <% if current_user %>
 
 <div class="panel panel-default">
     <div class="panel-body-post">
@@ -27,11 +28,11 @@
 				<br>
 				<strong>Tel: </strong><%= p.telephone %>
 				<br>
-
 				Posted: <%= time_ago_in_words(p.created_at) %> ago.
 				<hr><br>
 				<% end %>
 				<br>
 		</div>
 </div>
+
 		

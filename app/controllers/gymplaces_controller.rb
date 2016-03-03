@@ -2,9 +2,8 @@ class GymplacesController < ApplicationController
   # all gyms to display here with users post
   def index
     if current_user
-  	@gymplaces = Gymplace.all#.order("create_at DESC").paginate(page: params[:page], per_page: 2)
+  	@gymplaces = Gymplace.all.order("create_at DESC").paginate(page: params[:page], per_page: 4)
     @gymplace = Gymplace.where(post_id: current_user)
-    redirect_to root_path
     end
   end
 
@@ -17,7 +16,7 @@ class GymplacesController < ApplicationController
     @gymplaces = current_user.gymplaces
     #changed @posts to be posts for the gym by all users
     #otherwise you are showing reviews for other gyms on the show page of the gym
-    @posts = @gymplace.posts.order("created_at DESC").paginate(page: params[:page], per_page: 2)
+    @posts = @gymplace.posts.order("created_at DESC").paginate(page: params[:page], per_page: 4)
     if current_user
       @post = @gymplace.posts.build
     end    

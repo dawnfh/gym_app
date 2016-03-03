@@ -10,8 +10,9 @@ GymTalk
 
 Primary resources and inspirations for website development:
 
-		NYCDA
+		
 		Experience of living in NYC, passions for physical activity
+		NYCDA, desandro, Bootstrap
 
 
 About development:
@@ -24,6 +25,10 @@ About development:
 		
 Ruby Gems:
 
+		bycrypt
+
+		paperclip
+		
 		bootstrap-rails
 
 		will_paginate 
@@ -32,6 +37,7 @@ Ruby Gems:
 
 		masonary-rails - http://www.rubydoc.info/gems/masonry-rails/0.2.4
 
+Thanks to Unsplashed and Google images. Landing image was photographed by Tom Sodoge. 
 		
 
 
@@ -42,5 +48,4 @@ Wishlist:
 		to implement a search box
 		http://railscasts.  
 		com/episodes/37-simple-search-form
-
 

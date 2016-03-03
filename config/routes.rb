@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'gymplaces/new'
 
   root 'home#landing'
+  get '/about' => 'home#about'
   
   get '/login' =>'sessions#new'
   post '/login' => 'sessions#create'

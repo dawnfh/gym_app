@@ -8,27 +8,26 @@ ready = $(function(){
   var $container = $('#masonry-container');
 
   $container.imagesLoaded( function(){
-		$container.masonry({                           
-      itemSelector : '.box'
+		$container.masonry({   
+     itemSelector : '.box'
     });
   });
 });
 
 // sliding images on landing page 
 
-	$(document).ready(function(){
-    $("#masonry-container").click(function(){
-      $(".box").slideToggle("slow")  
+$(document).on("page:change", function(){
+  $("#masonry-container").click(function(){
+    $("").slideToggle("slow");
     });
 });
 
-
 // bs lightbox image gallery
 
-$(document).ready(function() {
+$(document).on("page:change", function() {
 $('.thumbnail').click(function(){
       $('.modal-body').empty();
-      
+
     var title = $(this).parent('a').attr("title");
     $('.modal-title').html(title);
     $($(this).parents('div').html()).appendTo('.modal-body');
@@ -36,7 +35,12 @@ $('.thumbnail').click(function(){
 });
 });
 
-
+// $(document).ready(function(){
+//   $('.container-gallery').bsPhotoGallery({
+//     "classes" : "col-xs-6 col-md-3",
+//     "hasModal" : true
+//   });
+// });
 
 
 

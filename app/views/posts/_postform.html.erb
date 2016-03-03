@@ -3,19 +3,17 @@
 <div id="review">
         <div class="form-group">
                 <%= form_for [@gymplace,@post]  do |f| %>
-
                 <div class="control-group">  
                         <%= f.label :Post, class: "control-label" %>
                         <%= f.text_area :post, class: "form-control", placeholder: "Tell us about it" %>
                 </div><br>
-
                 <div class="control-group">
                         <%=f.label :Picture, class: "control-label" %>
                         <%= f.file_field :avatar, class: "form-control", placeholder: "Upload Photo" %>
                 </div><br>
-
-                        <div class="form-actions"> 
-                        <%= f.submit  'Submit', class: "btn btn-primary" %>     
+                <div class="form-actions"> 
+                        <%= f.submit  'Submit', class: "btn btn-primary" %>
+                </div>     
                 <% end %>
         </div>
 </div>

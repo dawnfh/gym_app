@@ -47,6 +47,9 @@ gem 'masonry-rails', '~> 0.2.4'
 # page load faster for jquery
 gem 'jquery-turbolinks', '~> 2.1'
 
+# create Google
+gem 'gmaps4rails', '~> 2.1', '>= 2.1.2'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

@@ -1,6 +1,6 @@
 $b-yellow: #e5e491; $text-green: #47b700; $text-blue: #007dff;
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
 	color: black;
 	font-size: bold;
 }
@@ -14,13 +14,41 @@ h4 {
 	font-style: italic;
 }
 
+// login page  //
+
+.wel {
+	margin-top: 24%;
+	font-weight: 400;
+	font-weight: bold;
+	border: black;
+	font-size: 85px;
+	color: white;
+}
+
+.wel2 {
+	font-size: 34px;
+	font-weight: 400;
+	font-weight: bolder;
+  font-variant: small-caps;
+}
+
+.home_intro_1 {
+	padding-top: 40px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.home_intro_2 {
+	@extend .home_intro_1;
+}
+
 
 #h2, #h4 {
-	background-color: $text-green;
  	font-size: 30px;
  	color: #3e5bc7;
-
+ 	font-weight: bold;
 }
+
 
 //  nav_bar for all other pages  //
 
@@ -39,12 +67,14 @@ h4 {
 
 .logo {
 	z-index: 1;
+	font-size: 15px;
 }
 
 #bluelogo, #greenlogo {
+	 font-weight: 400;
 	 font-weight: bold;
 	 border: black;
-	 font-size: 25px;
+	 font-size: 40px;
 }
 
 #bluelogo {
@@ -58,15 +88,24 @@ h4 {
 //  fixed socail media bar  //
 
 #social {
-	position: fixed;
-	top: 215px;
-	right: 60px;
-	width: 64px;
-	padding:5px;
+	float: right;
 	z-index: 1;
 }
 
-// bs lightbox img gallery
+// About & contact page  //
+
+
+.email {
+	font-weight: bolder;
+  font-variant: small-caps;	
+	color: white;
+	font-weight: 400px;	
+}
+
+
+
+// bs lightbox img gallery  - landing //
+
 
 .modal-dialog {
 	width: 600px;
@@ -76,11 +115,33 @@ h4 {
 	margin-bottom: 6px;
 }
 
+.sites {
+	text-align: center;
+	color: $text-blue;
+}
+
+
+//  Login  //
+
+.w, .g {
+	color: red;
+}
+
+.user {
+	font-size: 20px;
+}
+
+.wellog {
+	margin-top: 30px;
+}
+
+.logform {
+}
+
 // photo collage masonry //
 
-
 #masonry-container {
-	width: 1200px;
+	width: 1180px;
 	margin: 0 auto;
 	background-color: black;
   padding: 5px 5px;
@@ -104,19 +165,19 @@ h4 {
 	zoom: 1; 
 }
 
-.col1 { width: 80px; }
-.col2 { width: 180px; }
-.col3 { width: 280px; } 
-.col4 { width: 380px; }
-.col5 { width: 480px; }
-.col6 { width: 580px; }
+// .col1 { width: 80px; }
+// .col2 { width: 180px; }
+// .col3 { width: 280px; } 
+// .col4 { width: 380px; }
+// .col5 { width: 480px; }
+// .col6 { width: 580px; }
 
-.col1 img { max-width: 80px; }
-.col2 img { max-width: 180px; }
-.col3 img { max-width: 280px; }
-.col4 img { max-width: 380px; }
-.col5 img { max-width: 480px; }
-.col6 img { max-width: 580px; }
+// .col1 img { max-width: 80px; }
+// .col2 img { max-width: 180px; }
+// .col3 img { max-width: 280px; }
+// .col4 img { max-width: 380px; }
+// .col5 img { max-width: 480px; }
+// .col6 img { max-width: 580px; }
 
 // Media Queries
 
@@ -142,7 +203,9 @@ only screen and (max-device-width : 599px){
  #menu {
  	top: 4%;
  }
-
+ li {
+ 		float: none;		
+ 	}
 }
  
 @media only screen and (max-width : 399px),
@@ -150,8 +213,13 @@ only screen and (max-device-width : 399px){
  #masonry-container {
  		width: 200px;
  }
+
  #menu: {
  		margin-right: 5%;
+ 		top: 55%;		
+ 	}
+ 	li {
+ 			float: none;
  		}
 }
 
