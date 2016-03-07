@@ -40,7 +40,7 @@ $b-yellow: #e5e491; $text-green: #47b700; $text-blue: #007dff;
 
 body {        
     position: relative;
-    background: url(jump.jpg) no-repeat;
+    background: url(jump.jpg);
     z-index: 2;
     background-size: 100%;
     width: 100%;
@@ -180,6 +180,12 @@ ul {
   text-align: center;
 }
 
+.alert {
+  font-size: 25px;
+  font-variant: uppercase;
+  color: black;
+}
+
 #mapemb {
   margin-top: 100px;
   width: 500px;
@@ -193,7 +199,11 @@ ul {
 
 .stylepost {
   margin-left: 100px;
-}   
+} 
+
+.container-gallery{
+  margin-top: 100px;
+}  
 
  //   Flash messages //
 
