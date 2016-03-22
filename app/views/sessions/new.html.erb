@@ -1,5 +1,5 @@
 
-<!-- Login  in JQ Masonry-->
+<!-- Login page; JQ Masonry-->
 
 <body class="lgbkgrd">
 
@@ -10,13 +10,13 @@
   <div class="box col4" >
     <div class="thumbnail">
       <div class="wellog">
-        <h1 class="w">Welcome to GymTalk</h1>
-        <h1 class="g">GymTalk Log-In</h1>
+        <h1 class="w text-center">Welcome to GymTalk</h1>
+        <h1 class="g text-center">GymTalk Log-In</h1>
       </div>
       <div class="logform">
         <%= form_tag login_path do %>
         <div class="user"><%= label_tag :Username %></div>
-        <div class="user"><%= text_field_tag :username %></div>
+        <div class="user"><%= text_field_tag :username%></div>
         <div class="user"><%= label_tag :Password %></div>
         <div class="user"><%= password_field_tag :password %></div>
         <%= submit_tag "Log in", class: "btn" %>

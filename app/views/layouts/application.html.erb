@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
   <title>gymtalk</title>
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
@@ -25,23 +25,25 @@
 
  <%= render 'partials/navbar' unless @disable_nav %>
  
+
   
 <!--  flash notices  -->
 
   <div class="flash_n">
-    <% flash[:notice] if flash[:notice] %>
+    <%= flash[:notice] if flash[:notice] %>
   </div>
   
   <div class="flash_a">
-    <% flash[:alert] if flash[:alert] %>
+    <%= flash[:alert] if flash[:alert] %>
   </div>
 
 
- <!-- yeild below  -->
+ <!-- yield below  -->
 
-<div id="yeild_container">
+<div id="yield_container">
         <%= yield %>      
 </div>
+
 
 
 </body>

@@ -1,0 +1,9 @@
+// .abbkgrd {
+//   background-image: url(<%#= asset_path 'dawn.jpg' %>);
+//   background-repeat: repeat-y;
+// }
+
+.abbkgrd {
+  background-image: url(dawn.jpg);
+  background-repeat: repeat-y;
+}

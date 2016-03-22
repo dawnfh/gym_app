@@ -25,22 +25,17 @@ $(document).on("page:change", function(){
 // bs lightbox image gallery
 
 $(document).on("page:change", function() {
-$('.thumbnail').click(function(){
+  $('.thumbnail').click(function(){
       $('.modal-body').empty();
 
     var title = $(this).parent('a').attr("title");
     $('.modal-title').html(title);
     $($(this).parents('div').html()).appendTo('.modal-body');
     $('#myModal').modal({show:true});
-});
+  });
 });
 
-// $(document).ready(function(){
-//   $('.container-gallery').bsPhotoGallery({
-//     "classes" : "col-xs-6 col-md-3",
-//     "hasModal" : true
-//   });
-// });
+
 
 
 

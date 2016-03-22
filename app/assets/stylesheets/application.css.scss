@@ -19,8 +19,6 @@
 *= require 'masonry/transitions'
 *= require_tree .
 
-
-
  
  *****Do not use *= require in Sass or your other stylesheets will
  not be able to access the Bootstrap mixins or variables.
@@ -40,11 +38,11 @@ $b-yellow: #e5e491; $text-green: #47b700; $text-blue: #007dff;
 
 body {        
     position: relative;
-    background: url(jump.jpg);
+    // width: 100%;
+    height: 100%;
+    background-image: url(jump.jpg);
     z-index: 2;
     background-size: 100%;
-    width: 100%;
-    height: 100%;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     color: black;
@@ -88,7 +86,7 @@ body {
     border-radius: 48%;
     position: fixed;
     right: 0;
-    top: 9%;
+    top: 34%;
     margin-top: -2.5em;
     background-color: #800000;
 }
@@ -133,12 +131,21 @@ ul {
 
 //  Signup form , edit form //
 
+.new_user {
+  width: 24%;
+  background-color: rgba(39, 174, 96,0.5);
+  margin-left: 40%;
+  padding: 10px;
+}
+
 #signup {
 	position: relative;
   top:50%;
-  left:10%;
+  left:32%;
   width:500px;
  }
+
+
 
 #review {
  position: relative;
@@ -174,7 +181,16 @@ ul {
 	@extend #signup;
 }
 
-// GymTalk page; site gallery; map   //
+// GymTalk page, all posts, site gallery, map   //
+
+#h2 {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+  color: rgba(39, 174, 96,0.8);
+  font-size: 40px;
+
+}
 
 .userp {
   text-align: center;
@@ -186,11 +202,38 @@ ul {
   color: black;
 }
 
-#mapemb {
-  margin-top: 100px;
-  width: 500px;
-  height: 400px;
-  background-color: #CCC;
+.ads {
+  margin-left: 10px;
+  display: inline-block;
+  width: 150px;
+}
+
+.hdrr {
+  font-size: 30px;
+  color: #c0392b;
+}
+
+.hdrl {
+  font-size: 30px;
+  color: #2980b9;
+}
+
+.business {
+  margin-top: 160px;
+}
+
+// #mapemb {
+//   margin-top: 100px;
+//   width: 500px;
+//   height: 400px;
+//   background-color: #CCC;
+// }
+
+#map {
+  margin: 50px auto;
+  width: 700px;
+  height: 600px;
+  // background-color: #CCC;
 }
 
 .gp {

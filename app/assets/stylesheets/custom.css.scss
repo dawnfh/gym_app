@@ -10,14 +10,27 @@ h3 {
 }
 
 h4 {
+	text-align: center;
 	color: red;
 	font-style: italic;
 }
 
+
 // login page  //
 
+.logform input {
+    margin-right: auto;
+    display: block;
+    margin-left: auto;
+}
+
+.logform .user {
+    text-align: center;
+}
+
 .wel {
-	margin-top: -33%;
+	margin-left: 10%;
+	margin-top: 24%;
 	font-weight: 400;
 	font-weight: bold;
 	border: black;
@@ -26,10 +39,12 @@ h4 {
 }
 
 .wel2 {
-	margin-top: -17%;
-	font-size: 34px;
-	font-weight: 400;
-	font-weight: bolder;
+	width: 236px;
+  margin-left: 110%;
+  margin-top: -12%;
+  font-size: 46px;
+  font-weight: 400;
+  font-weight: bolder;
   font-variant: small-caps;
 }
 
@@ -67,6 +82,7 @@ h4 {
 //  logo for GT  //
 
 .logo {
+	margin-left: 1%;
 	z-index: 1;
 	font-size: 15px;
 }
@@ -103,12 +119,19 @@ h4 {
 	font-weight: 400px;	
 }
 
-#end {
+#end #end1 #end2 {
 	color: white;
 }
-#end2 {
-	color: $text-blue;
+
+.gymtalkabout {
+	margin-top: 5%;
+	margin-left: 3%;
+	width: 675px;
+	background-color: rgba(236,240,241,0.2);
+	border-radius: 3%;
 }
+
+
 
 // bs lightbox img gallery  - landing //
 
@@ -127,7 +150,7 @@ h4 {
 }
 
 .carol {
-	float: right;
+	margin-top: 50px;
 }
 
 //  Login  //
@@ -231,6 +254,3 @@ only screen and (max-device-width : 399px){
  			float: none;
  		}
 }
-
-
-
