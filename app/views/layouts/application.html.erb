@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
   <title>gymtalk</title>
-  <linkhref="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "new" if controller_name == "new" %>
 </head>
-<body>
+<body data-spy="scroll" data-target="#nb">
   
   
 <!-- logo -->
 
   <div class="logo">
-    <%= image_tag 'chat.png' %><span id="bluelogo">Gym</span><span id="greenlogo">Talk</span>
+    <%= link_to(image_tag("/assets/chat.png", :alt => "logo", :title => "Home"), "/") %><span id="bluelogo">Gym</span><span id="greenlogo">Talk</span>
   </div>
 
-  
-<!-- social bar  -->
 
-  <div id="social">
-  		<ul class="soc_ul">
-        <li><a href="http://www.pininterest.com" alt="pin"><%= image_tag 'pininterest.png' %></a></li>
-  			<li><a href="http://www.facebook.com" ><%= image_tag 'facebook.png' %></a></li>
-  			<li><a href="http://www.twitter.com" alt="twitter"><%= image_tag 'twitter.png' %></a></li>
 
-  		</ul>
-  </div>
-  
+  <!-- insert render to display nav unless marked disabled -->
+
+ <%= render 'partials/navbar' unless @disable_nav %>
+ 
+
   
 <!--  flash notices  -->
 
@@ -41,16 +38,13 @@
   </div>
 
 
-<!-- insert render to display nav unless marked disabled -->
+ <!-- yield below  -->
 
- <%= render 'partials/navbar' unless @disable_nav %>
-
- <div id="footer">
-  <h6></h6>
+<div id="yield_container">
+        <%= yield %>      
 </div>
-      <div id="yeild_container">
-            <%= yield %>
-      </div>
+
+
 
 </body>
 </html>

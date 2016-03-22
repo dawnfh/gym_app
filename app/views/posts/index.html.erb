@@ -3,24 +3,21 @@
 <%= render 'partials/navbar' unless @disable_nav %>
 
 <h1>Create Review</h1>
-
 <hr><br>
 
 <h1>My Posts</h1>
-
 <% if current_user.posts.any? %>
 	<h3>Posts (<%= current_user.posts.count %>)</h3>
-    <% end %>
+<% end %>
 
-    <div>
-   <%= render 'postform' %>
+<div>
+	<%= render 'postform' %>
 </div>
 
 
 <div class="panel panel-default">
     <div class="panel-body-post">
     		<% @posts.each do |r| %>
-
     		<strong>By: </strong><%= r.user.username %>
     		<br>
     		<strong>Place: </strong><%= r.place %>
@@ -31,13 +28,20 @@
 				<br> 
 				<strong>Post: </strong><%= r.post %>
 				<br>
-				Posted: <%= time_ago_in_words(r.created_at) %> ago.
+				Posted: <%= time_ago_in_words(r.created_at) %>.ago.
 				<hr><br>
 				<% end %>
 				<br>
 		</div>
 </div>
 
-<% end %>
-
-<hr> 
+<h5>Your Reviews</h5>
+<div class="panel panel-default">
+	<div class="panel-body">
+	 	<% posts.each do |p| %>
+    <%=link_to user do %>
+		<strong>Review: </strong><%= p.post %><br>
+		<strong>Created: </strong><%= time_go_in_words(p.created_at).ago %>
+		<% end %>
+	</div>
+</div>

@@ -15,6 +15,8 @@
 //= require jquery_ujs
 // require jquery.stellar.min
 //= require bootstrap-sprockets
+//= require underscore
+//= require gmaps/google
 //= require turbolinks
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag

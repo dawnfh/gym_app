@@ -11,6 +11,13 @@ class ApplicationController < ActionController::Base
   def disable_nav
     @disable_nav = true
   end
+
+
+  @gymplaces = Gymplace.all
+  @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+  marker.lat user.latitude
+  marker.lng user.longitude
+end
   
   #method will log user in or return nil
   def current_user

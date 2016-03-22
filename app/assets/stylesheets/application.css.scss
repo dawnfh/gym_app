@@ -19,8 +19,6 @@
 *= require 'masonry/transitions'
 *= require_tree .
 
-
-
  
  *****Do not use *= require in Sass or your other stylesheets will
  not be able to access the Bootstrap mixins or variables.
@@ -34,19 +32,24 @@ $b-yellow: #e5e491; $text-green: #47b700; $text-blue: #007dff;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'custom';
+@import 'image';
 
 
 
-body {
-     background: url(topland.jpg);
-     z-index: 2;
-    background-size: 100%;
-    width: 100%;
+body {        
+    position: relative;
+    // width: 100%;
     height: 100%;
-    font-family: 'BebasRegular';
+    background-image: url(jump.jpg);
+    z-index: 2;
+    background-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
     color: black;
     font-family: 'Lora', serif;
+    overflow-y: scroll
 }
+
 
 //  bs columns  //
 
@@ -71,23 +74,30 @@ body {
   border-radius:50%
 }	
 
-//  nav bar for landing page  //
+//  Nav bar for primary landing page  //
 
+#lgn, #sgn {
+  color: black;
+}
 
-#menu {  
-    margin-right: 41%;
+#menu { 
+    font-size: 2em;
+    margin-right: 11%;
     border-radius: 48%;
     position: fixed;
     right: 0;
-    top: 9%;
+    top: 34%;
     margin-top: -2.5em;
-    background-color: black;
+    background-color: #800000;
 }
 
 #menu li :hover {
 		text-decoration: none;
 		display: inline;
-    background-color: #f29c9c
+    color: #f29c9c;
+    font-variant: bold;
+    font-weight: 400px;
+    border-radius: 5%;
 }
 
 li{
@@ -102,7 +112,7 @@ ul {
     padding-right:20px
 }
 
-//  home anding page  //
+//  Home anding page  //
 
 
 .home_container {
@@ -112,21 +122,30 @@ ul {
 	line-height: 3.4em;	
 }
 
-//  buttons  //
+//  Buttons  //
 
 .btn {
 	border-radius: 24px;
 	color: 5ab5e1;
 }
 
-//  signup form , edit form //
+//  Signup form , edit form //
+
+.new_user {
+  width: 24%;
+  background-color: rgba(39, 174, 96,0.5);
+  margin-left: 40%;
+  padding: 10px;
+}
 
 #signup {
 	position: relative;
   top:50%;
-  left:10%;
+  left:32%;
   width:500px;
  }
+
+
 
 #review {
  position: relative;
@@ -134,7 +153,21 @@ ul {
   left:10%;
   width:500px;
  }
+ .control-label {
+  font-size: 2em;
+ }
 
+ .container.show {
+  margin-right: 25px;
+  // margin-left: auto;
+  // margin-right: auto;
+ }
+
+
+.transbox {
+  background-color: #ffffff;
+  opacity: 0.6; 
+}
 
 .panel {
 	@extend #signup;
@@ -148,7 +181,74 @@ ul {
 	@extend #signup;
 }
 
- //   flash messages //
+// GymTalk page, all posts, site gallery, map   //
+
+#h2 {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+  color: rgba(39, 174, 96,0.8);
+  font-size: 40px;
+
+}
+
+.userp {
+  text-align: center;
+}
+
+.alert {
+  font-size: 25px;
+  font-variant: uppercase;
+  color: black;
+}
+
+.ads {
+  margin-left: 10px;
+  display: inline-block;
+  width: 150px;
+}
+
+.hdrr {
+  font-size: 30px;
+  color: #c0392b;
+}
+
+.hdrl {
+  font-size: 30px;
+  color: #2980b9;
+}
+
+.business {
+  margin-top: 160px;
+}
+
+// #mapemb {
+//   margin-top: 100px;
+//   width: 500px;
+//   height: 400px;
+//   background-color: #CCC;
+// }
+
+#map {
+  margin: 50px auto;
+  width: 700px;
+  height: 600px;
+  // background-color: #CCC;
+}
+
+.gp {
+  display: inline-block;
+} 
+
+.stylepost {
+  margin-left: 100px;
+} 
+
+.container-gallery{
+  margin-top: 100px;
+}  
+
+ //   Flash messages //
 
  .flash_a {
  	color: red;
@@ -164,5 +264,9 @@ ul {
 			}
       #menu {
         margin-right: 5%;
+        li {
+          float: none
+        }
       }
+
 }

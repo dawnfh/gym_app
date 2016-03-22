@@ -1,15 +1,58 @@
-<h1>Welcome to GymTalk</h1>
 
+<!-- Login page; JQ Masonry-->
 
+<body class="lgbkgrd">
 
-<h1>GymTalk Log-In</h1>
-
-<div class="logform">
-<%= form_tag login_path do %>
-<%= label_tag :Username %>
-<%= text_field_tag :username %>
-<%= label_tag :Password %>
-<%= password_field_tag :password %>
-<%= submit_tag "Log in" %>
-<% end %>
-</div>
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+  <div class="box col4">
+    <%= image_tag 'tenorange.jpg' %>
+  </div>
+  <div class="box col4" >
+    <div class="thumbnail">
+      <div class="wellog">
+        <h1 class="w text-center">Welcome to GymTalk</h1>
+        <h1 class="g text-center">GymTalk Log-In</h1>
+      </div>
+      <div class="logform">
+        <%= form_tag login_path do %>
+        <div class="user"><%= label_tag :Username %></div>
+        <div class="user"><%= text_field_tag :username%></div>
+        <div class="user"><%= label_tag :Password %></div>
+        <div class="user"><%= password_field_tag :password %></div>
+        <%= submit_tag "Log in", class: "btn" %>
+        <% end %>
+      </div>  
+    </div>
+  </div>
+  <div class="box col4">
+    <h4>Find a spot to workout now!</h4>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'dogball.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'ball8.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'ball7.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'ball3.jpg' %>
+  </div>
+  <div class="box col4">
+    <h4>Prepare yourself for the latest training that burns!</h4>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'ball2.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'ball5.jpg' %>
+  </div>
+  <div class="box col4">
+    <%= image_tag 'ball1.jpg' %>
+  </div>
+  <div class="box col4">
+    <h4>Too tired of being tired? Take a run in your local park. Check out the dance studio after work. </h4>
+  </div>
+</div> 
+</body>
